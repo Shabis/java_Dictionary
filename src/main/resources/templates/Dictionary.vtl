@@ -1,5 +1,11 @@
 <h1>Dictionary</h1>
 
+#if ($definitions)
 <ul>
-  #foreach()
+  #foreach($definition in $definitions)
+  <li>$definition.getDescription()</li>
+  #end
 </ul>
+#else
+  <p>No definitions have been added.</p>
+#end

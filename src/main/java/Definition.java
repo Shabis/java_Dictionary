@@ -1,18 +1,35 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Definition {
   private String mDescription;
-  private boolean mCompleted;
-
+  private static List<Definition> instances = new ArrayList<Definition>();
+  private int mId;
 
   public Definition(String description) {
     mDescription = description;
-    mCompleted = false;
+    instances.add(this);
+    mId = instances.size();
   }
 
   public String getDescription() {
     return mDescription;
   }
 
-  public boolean isCompleted() {
-    return mCompleted;
+  public static List<Definition> all() {
+    return instances;
   }
+
+  public static void clear() {
+    instances.clear();
+  }
+
+  public int getId() {
+    return mId;
+  }
+
+  public static Definition find(int id) {
+    return instances.get(id - 1);
+  }
+
 }
