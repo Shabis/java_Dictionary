@@ -50,7 +50,7 @@ In this project I used java, gradle, GitHub, Atom, junit, Velocity, Sparks and  
 ### Links to Past Projects
 ------
 
-* [Event Planning](https://github.com/Shabis/java_EventPlanning.git)
+* [Event Planning](https://github.com/Shabis/java_EventPlanning2.git)
 * [Pizza](https://github.com/Shabis/Pizza_js.git)
 * [Travel](https://github.com/Shabis/Travel.git)
 * [Grocery List](https://github.com/Shabis/Grocery_List.git)
