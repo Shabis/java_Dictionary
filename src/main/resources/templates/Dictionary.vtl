@@ -1,11 +1,10 @@
 <h1>Dictionary</h1>
-
-#if ($definitions)
+#if ($words)
 <ul>
-  #foreach($definition in $definitions)
-  <li>$definition.getDescription()</li>
+  #foreach($word in $words)
+  <li>$word.getName()</li>
   #end
 </ul>
 #else
-  <p>No definitions have been added.</p>
+  <p>No words have been added.</p>
 #end
