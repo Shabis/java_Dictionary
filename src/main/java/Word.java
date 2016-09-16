@@ -7,7 +7,6 @@ public class Word {
   private int mId;
   private List<Definition> mDefinitions;
 
-
   public Word(String name) {
     mName = name;
     instances.add(this);
@@ -20,16 +19,20 @@ public class Word {
   }
 
   public static ArrayList<Word> all() {
-    return instances;
+   return instances;
   }
 
-  public static void clear() {
-    instances.clear();
-  }
+ public static void clear() {
+   instances.clear();
+ }
 
   public int getId() {
     return mId;
   }
+
+  public static Word find(int id) {
+   return instances.get(id - 1);
+ }
 
   public List<Definition> getDefinitions() {
     return mDefinitions;

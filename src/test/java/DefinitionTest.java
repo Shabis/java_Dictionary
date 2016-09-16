@@ -22,4 +22,23 @@ public class DefinitionTest {
     assertEquals(true, Definition.all().contains(firstDefinition));
     assertEquals(true, Definition.all().contains(secondDefinition));
   }
+
+  @Test
+  public void Definition_clearList_0() {
+    Definition myDefinition = new Definition("greeting");
+    Definition.clear();
+    assertEquals(Definition.all().size(), 0);
+  }
+
+  @Test
+  public void Definition_getDifinitionId_1() {
+    Definition myDefinition = new Definition("greeting");
+    assertEquals(1, myDefinition.getId());
+  }
+
+  @Test
+  public void Definition_findDefinitionWithIdof_myDefinition() {
+    Definition myDefinition = new Definition("greeting");
+    assertEquals(Definition.find(myDefinition.getId()), myDefinition);
+  }
 }
