@@ -1,10 +1,10 @@
-<h1>$word.getName() Definition</h1>
+<h1>$word.getName() Definition:</h1>
 
 <ul>
-  #foreach($definition in $word.getDefinition())
-    <li>$defintion.getDescription()</li>
+  #foreach($definition in $word.getDefinitions())
+    <li>$definition.getDescription()</li>
   #end
 </ul>
 
-<a class="btn btn-default" href="/words/$word.getId()/defintions/new">Add Another Definition to This Word</a>
+<a class="btn btn-default" href="/words/$word.getId()/definitions/new">Add a Definition to This Word</a>
 <a class="btn btn-default" href="/words">See Word List</a>

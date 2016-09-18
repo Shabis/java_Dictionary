@@ -19,7 +19,7 @@ public class App {
     get("/words", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
       model.put("words", Word.all());
-      model.put("template", "templates/words.vtl");
+      model.put("template", "templates/dictionary.vtl");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
@@ -56,15 +56,20 @@ public class App {
 
     get("/definitions", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
-      model.put("defintion", Definition.all());
-      model.put("template", "templates/definitions");
+      model.put("definition", Definition.all());
+      model.put("template", "templates/words.vtl");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
     post("/definitions", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
+      Word word = Word.find(Integer.parseInt(request.queryParams("wordId")));
       String description = request.queryParams("description");
       Definition newDefinition = new Definition(description);
+
+      word.addDefinition(newDefinition);
+
+      model.put("word", word);
       model.put("template", "templates/definition-success.vtl");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
@@ -75,18 +80,13 @@ public class App {
     //   return new ModelAndView(model, layout);
     // }, new VelocityTemplateEngine());
 
-
-
-
-
-
-    get("/definitions/:id", (request, response) -> {
-      Map<String, Object> model = new HashMap<String, Object>();
-      Definition definition = Definition.find(Integer.parseInt(request.params(":id")));
-      model.put("definition", definition);
-      model.put("template", "templates/definition.vtl");
-      return new ModelAndView(model, layout);
-    }, new VelocityTemplateEngine());
+    // get("/definitions/:id", (request, response) -> {
+    //   Map<String, Object> model = new HashMap<String, Object>();
+    //   Definition definition = Definition.find(Integer.parseInt(request.params(":id")));
+    //   model.put("definition", definition);
+    //   model.put("template", "templates/definition.vtl");
+    //   return new ModelAndView(model, layout);
+    // }, new VelocityTemplateEngine());
 
 
   }

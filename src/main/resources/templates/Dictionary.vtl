@@ -1,10 +1,7 @@
-<h1>Dictionary</h1>
-#if ($words)
+<h2>Your Word List:</h2>
 <ul>
-  #foreach($word in $words)
-  <li>$word.getName()</li>
+  #foreach ($word in $words)
+    <li><a href="/words/$word.getId()">$word.getName()</a></li>
   #end
 </ul>
-#else
-  <p>No words have been added.</p>
-#end
+<a class="btn btn-default" href="/words/new">Add Another Word to Your Dictionary</a>

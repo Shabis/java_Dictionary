@@ -25,9 +25,9 @@ No known bugs.
 ### Specifications
 ------
 
-* This application will ask a user for a word to add to the dictionary.
-* Once a word has been added it will navigate to a page to add a definition. Additional definitions for this word may be added at this time.
-* Once the user has added a word and its definition(s) it will go to a success page with links to add another word or to view the dictionary with the words added.
+* This application will ask a user to start a dictionary and add a word to their dictionary.
+* Once a word has been added it will navigate to a page with the words that have been added.
+* They will then have the option to add another word or to add a definition to an existing word.
 * On the dictionary view page will be additional links to navigate back to the start or to add another word.
 
 
@@ -51,12 +51,12 @@ In this project I used java, gradle, GitHub, Atom, junit, Velocity, Sparks and  
 ------
 
 * [Event Planning](https://github.com/Shabis/java_EventPlanning2.git)
-* [Pizza](https://github.com/Shabis/Pizza_js.git)
+* [Pizza](https://Shabis.github.io/Pizza_js/)
 * [Travel](https://github.com/Shabis/Travel.git)
 * [Grocery List](https://github.com/Shabis/Grocery_List.git)
 * [Portfolio2](https://github.com/Shabis/Portfolio2.git)
 * [Triangle](https://github.com/Shabis/Triangle.git)
-* [Travel Code Review](http://shabis.github.io/Travel/_Code_Review/)
+* [Travel Code Review](http://shabis.github.io/Travel_Code_Review/)
 * [Ping-Pong Code Review](http://shabis.github.io/Ping-Pong/)
 
 Copyright (c) 2016 **_Shelby Clayton_**
